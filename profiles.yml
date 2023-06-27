@@ -1,0 +1,10 @@
+ jaffle_shop:
+   target: databricks_job
+   outputs:
+     databricks_job:
+      type: databricks
+      method: http
+      schema: "default"
+      host: "cust-e2-us-west-2.cloud.databricks.com"
+      http_path: "/sql/1.0/warehouses/d548a726ea54bd0e"
+      token: "{{ env_var('DBT_ACCESS_TOKEN') }}"
